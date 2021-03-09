@@ -10,73 +10,31 @@ public class Patterns {
         FLIPPED
     }
     
+    private static int lineCount = 5;
+    private static int starsLineCount = lineCount - 1;
+    private static ArrayList<String> lines = new ArrayList<String>();
+    
     /**
      * Prints a pattern of stars and dots.
      * @param style The style of the pattern.
-     * @param dotsCount The number of dots to be added as the last line.
      */
     private static void print(Style style) {
-        int lineCount = 5;
-        int starsLineCount = lineCount - 1;
+        lines.clear();
         int dotsCount = 0;
-        ArrayList<String> lines = new ArrayList<String>();
         switch (style) {
             case LEFT_ALIGNED: {
-                for (int starsCount = 0; starsCount < starsLineCount; ++starsCount) {
-                    String line = "";
-                    for (int i = 0; i <= starsCount; ++i) {
-                        line += "*";
-                    }
-                    lines.add(line);
-                }
-                dotsCount = 6;
-                String dotsLine = "";
-                for (int i = 0; i < dotsCount; ++i) {
-                    dotsLine += ".";
-                }
-                lines.add(dotsLine);
+                addLeftAlignedLinesToList();
+                addDotsLineToList(6);
                 break;
             }
             case RIGHT_ALIGNED: {
-                for (int starsCount = 0; starsCount < starsLineCount; ++starsCount) {
-                    String line = "";
-                    boolean aligned = false;
-                    for (int i = 0; i <= starsCount; ++i) {
-                        int maxStarsCount = 4;
-                        int spaceCount = maxStarsCount - starsCount;
-                        if (!aligned) {
-                            for (int j = 0; j < spaceCount; ++j) {
-                                line += " ";
-                            }
-                            aligned = true;
-                        }
-                        aligned = true;
-                        line += "*";
-                    }
-                    lines.add(line);
-                }
-                dotsCount = 5;
-                String dotsLine1 = "";
-                for (int i = 0; i < dotsCount; ++i) {
-                    dotsLine1 += ".";
-                }
-                lines.add(dotsLine1);
+                addRightAlignedLinesToList();
+                addDotsLineToList(5);
                 break;
             }
             case FLIPPED: {
-                for (int starsCount = 0; starsCount < starsLineCount; ++starsCount) {
-                    String line = "";
-                    for (int i = 0; i <= starsCount; ++i) {
-                        line += "*";
-                    }
-                    lines.add(line);
-                }
-                dotsCount = 5;
-                String dotsLine = "";
-                for (int i = 0; i < dotsCount; ++i) {
-                    dotsLine += ".";
-                }
-                lines.add(dotsLine);
+                addLeftAlignedLinesToList();
+                addDotsLineToList(5);
                 Collections.reverse(lines);
                 break;
             }
@@ -84,6 +42,48 @@ public class Patterns {
         
         for (String s : lines) {
             System.out.println(s);
+        }
+    }
+    
+    private static void addLeftAlignedLinesToList() {
+        for (int starsCount = 0; starsCount < starsLineCount; ++starsCount) {
+            String line = "";
+            for (int i = 0; i <= starsCount; ++i) {
+                line += "*";
+            }
+            lines.add(line);
+        }
+    }
+    
+    /**
+     * 
+     * @param dotsCount
+     */
+    private static void addDotsLineToList(int dotsCount) {
+        String dotsLine = "";
+        for (int i = 0; i < dotsCount; ++i) {
+            dotsLine += ".";
+        }
+        lines.add(dotsLine);
+    }
+    
+    private static void addRightAlignedLinesToList() {
+        for (int starsCount = 0; starsCount < starsLineCount; ++starsCount) {
+            String line = "";
+            boolean aligned = false;
+            for (int i = 0; i <= starsCount; ++i) {
+                int maxStarsCount = 4;
+                int spaceCount = maxStarsCount - starsCount;
+                if (!aligned) {
+                    for (int j = 0; j < spaceCount; ++j) {
+                        line += " ";
+                    }
+                    aligned = true;
+                }
+                aligned = true;
+                line += "*";
+            }
+            lines.add(line);
         }
     }
     
