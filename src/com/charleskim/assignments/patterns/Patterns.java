@@ -20,7 +20,6 @@ public class Patterns {
      */
     private static void print(Style style) {
         lines.clear();
-        int dotsCount = 0;
         switch (style) {
             case LEFT_ALIGNED: {
                 addLeftAlignedLinesToList();
