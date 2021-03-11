@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch InputAdd",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.add.InputAdd",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileNames",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.filenames.FileNames",
+            "projectName": "week-1",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumberGuess",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.guess.NumberGuess",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxNumberFind",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.maxnumber.MaxNumberFind",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Patterns",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.patterns.Patterns",
+            "projectName": "week-1"
+        }
+    ]
+}
