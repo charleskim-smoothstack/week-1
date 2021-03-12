@@ -32,7 +32,6 @@ public class TextAppend {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-
             }
         } catch (NoSuchElementException | IllegalStateException e) {
             e.printStackTrace();

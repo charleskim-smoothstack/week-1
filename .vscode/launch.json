@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CharacterCount",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.charactercount.CharacterCount",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
