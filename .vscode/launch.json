@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch CharacterCount",
-            "request": "launch",
-            "mainClass": "com.charleskim.assignments.charactercount.CharacterCount",
-            "projectName": "week-1"
-        },
-        {
-            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -26,11 +19,18 @@
         },
         {
             "type": "java",
+            "name": "Launch CharacterCount",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.charactercount.CharacterCount",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
             "name": "Launch FileNames",
             "request": "launch",
             "mainClass": "com.charleskim.assignments.filenames.FileNames",
-            "projectName": "week-1",
-            "args": "${command:SpecifyProgramArgs}"
+            "args": "${command:SpecifyProgramArgs}",
+            "projectName": "week-1"
         },
         {
             "type": "java",
@@ -51,6 +51,20 @@
             "name": "Launch Patterns",
             "request": "launch",
             "mainClass": "com.charleskim.assignments.patterns.Patterns",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
+            "name": "Launch TextAppend",
+            "request": "launch",
+            "mainClass": "com.charleskim.assignments.textappend.TextAppend",
+            "projectName": "week-1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Deadlock",
+            "request": "launch",
+            "mainClass": "com.charleskim.dayfour.deadlock.Deadlock",
             "projectName": "week-1"
         }
     ]
