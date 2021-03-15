@@ -1,7 +1,13 @@
 {
-    "java.project.referencedLibraries": [
-        "C:\\Users\\admin\\lib\\junit-4.13.2.jar",
-        "C:\\Users\\admin\\lib\\hamcrest-core-1.3.jar",
-        "c:\\Users\\admin\\lib\\hamcrest-core-1.3.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "C:\\Users\\admin\\lib\\junit-4.13.2.jar",
+            "c:\\Users\\admin\\lib\\hamcrest-core-1.3.jar"
+        ],
+        "exclude": []
+    },
+    // "java.test.config": [
+    //     {
+    //     }
+    // ]
 }
